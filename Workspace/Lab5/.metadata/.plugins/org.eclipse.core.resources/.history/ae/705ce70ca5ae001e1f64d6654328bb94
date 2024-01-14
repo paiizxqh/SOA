@@ -1,0 +1,18 @@
+package th.ac.ku.kps.eng.cpe.entity;
+
+public class PhoneNumber {
+	private String number;
+
+	public PhoneNumber() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getNumber() {
+		return number;
+	}
+
+	public void setNumber(String number) {
+		this.number = number;
+	}
+
+}

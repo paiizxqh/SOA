@@ -1,0 +1,9 @@
+package th.ac.ku.kps.eng.cpe.entity;
+
+public class Customer {
+
+	public Customer() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

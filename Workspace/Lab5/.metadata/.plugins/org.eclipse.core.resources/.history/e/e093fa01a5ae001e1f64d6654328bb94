@@ -1,0 +1,10 @@
+package th.ac.ku.kps.eng.cpe.entity;
+
+public class PhoneNumber {
+	private String number;
+
+	public PhoneNumber() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

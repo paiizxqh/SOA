@@ -1,0 +1,6 @@
+contextsDir=C\:\\Users\\8404-xx\\Documents\\apache-tomcat-9.0.84\\conf\\Catalina\\localhost
+eclipse.preferences.version=1
+managerUrl=http\://localhost\:8080/manager
+tomcatConfigFile=C\:\\Users\\8404-xx\\Documents\\apache-tomcat-9.0.84\\conf\\server.xml
+tomcatDir=C\:\\Users\\8404-xx\\Documents\\apache-tomcat-9.0.84
+tomcatVersion=tomcatV9

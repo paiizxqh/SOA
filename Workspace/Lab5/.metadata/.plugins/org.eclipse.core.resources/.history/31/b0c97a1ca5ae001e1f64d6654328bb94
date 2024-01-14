@@ -1,0 +1,18 @@
+package th.ac.ku.kps.eng.cpe.entity;
+
+public class Customer {
+	private String name;
+	List number;
+	
+	public Customer (String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+}

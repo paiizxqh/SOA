@@ -1,0 +1,61 @@
+package th.ac.ku.kps.eng.cpe.dao;
+import java.util.ArrayList;
+
+import th.ac.ku.kps.eng.cpe.entity.Customer;
+
+public class CustomerDAO {
+
+	public CustomerDAO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public ArrayList<Customer> getAllCustomers() {
+
+		ArrayList<Customer> listOfCustomers = new ArrayList<>();
+
+		try {
+
+			File file = new File("Customer.dat");
+
+			if (!file.exists()) {
+				Customer c1 = new Customer("Mr.Smith");
+				Customer c2 = new Customer("Mrs.Smith");
+
+				listOfCustomers.add(c1);
+				c1.getPhoneNumbers().add(new PhoneNumber("145-1654-1495"));
+				listOfCustomers.add(c2);
+				saveCustomerList(listOfCustomers);
+			} else {
+				FileInputStream fis = new FileInputStream(file);
+				ObjectInputStream ois = new ObjectInputStream(fis);
+				listOfCustomers = (ArrayList<Customer>) ois.readObject();
+				ois.close();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return listOfCustomers;
+		}
+
+
+
+
+
+
+		private void saveCustomerList(List<Customer> cusList) {
+			try {
+				File file = new File("Users.dat");
+				FileOutputStream fos;
+				fos = new FileOutputStream(file);
+				ObjectOutputStream oos = new ObjectOutputStream(fos);
+				oos.writeObject(cusList);
+				oos.close();
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+
+}
